@@ -95,9 +95,9 @@ namespace Semesterproject
         {
             txt_PassId.Text = guna2DataGridView1.SelectedRows[0].Cells[0].Value.ToString();
             txt_PassName.Text = guna2DataGridView1.SelectedRows[0].Cells[1].Value.ToString();
-            txt_PassAdress.Text = guna2DataGridView1.SelectedRows[0].Cells[3].Value.ToString();
+            txt_Passport.Text = guna2DataGridView1.SelectedRows[0].Cells[3].Value.ToString();
             txt_PassNation.Text = guna2DataGridView1.SelectedRows[0].Cells[4].Value.ToString();
-            txt_passport.Text = guna2DataGridView1.SelectedRows[0].Cells[2].Value.ToString();
+            txt_CNIC.Text = guna2DataGridView1.SelectedRows[0].Cells[2].Value.ToString();
             txt_Gender.Text = guna2DataGridView1.SelectedRows[0].Cells[5].Value.ToString();
             txt_Phone.Text = guna2DataGridView1.SelectedRows[0].Cells[6].Value.ToString();
         }
@@ -106,16 +106,16 @@ namespace Semesterproject
         {
             txt_PassId.Text = "";
             txt_PassName.Text = "";
-            txt_PassAdress.Text = "";
+            txt_Passport.Text = "";
             txt_PassNation.Text = "";
-            txt_passport.Text = "";
+            txt_CNIC.Text = "";
             txt_Gender.Text = "";
             txt_Phone.Text = "";
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
-            if (txt_Gender.Text == "" || txt_Phone.Text == "" || txt_PassAdress.Text == "" || txt_PassId.Text == "" || txt_PassNation.Text == "" || txt_PassName.Text == "" || txt_passport.Text == "")
+            if (txt_Gender.Text == "" || txt_Phone.Text == "" || txt_Passport.Text == "" || txt_PassId.Text == "" || txt_PassNation.Text == "" || txt_PassName.Text == "" || txt_CNIC.Text == "")
             {
                 MessageBox.Show("Missing Information !!");
             }
@@ -123,13 +123,11 @@ namespace Semesterproject
             {
                 var filter = Builders<Passengers>.Filter.Eq("PassId", txt_PassId.Text);
                 var update = Builders<Passengers>.Update
-                .Set("PassId", txt_PassId.Text)
-                .Set("PassAddress", txt_PassAdress.Text)
                 .Set("PassNationality", txt_PassNation.Text)
                 .Set("PassGender", txt_Gender.Text)
                 .Set("PassName", txt_PassName.Text)
                 .Set("PassPhone", txt_Phone.Text)
-                .Set("Passport", txt_passport.Text);
+                .Set("Passport", txt_Passport.Text);
 
                 _passengersCollection.UpdateOne(filter, update);
 
@@ -137,6 +135,35 @@ namespace Semesterproject
                 var passengers = _passengersCollection.Find(_ => true).ToList();
                 guna2DataGridView1.DataSource = passengers;
             }
+        }
+
+        private void txt_PassId_Leave(object sender, EventArgs e)
+        {
+            var filter = Builders<Passengers>.Filter.Eq("PassId", txt_PassId.Text);
+            var res = _passengersCollection.Find(filter).FirstOrDefault();
+
+            if (res != null)
+            {
+                txt_Gender.Text = res.PassGender;
+                txt_Passport.Text = res.Passport;
+                txt_PassName.Text = res.PassName;
+                txt_PassNation.Text = res.PassNationality;
+                txt_CNIC.Text = res.CNIC;
+                txt_Phone.Text = res.PassPhone;
+
+                txt_CNIC.ReadOnly = true;
+            }
+        }
+
+        private void txt_PassId_Enter(object sender, EventArgs e)
+        {
+            txt_PassId.Text = "";
+            txt_PassName.Text = "";
+            txt_Passport.Text = "";
+            txt_PassNation.Text = "";
+            txt_CNIC.Text = "";
+            txt_Gender.Text = "";
+            txt_Phone.Text = "";
         }
     }
 }

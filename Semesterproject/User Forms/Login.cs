@@ -16,14 +16,14 @@ namespace Semesterproject
 {
     public partial class Login : Form
     {
-        private readonly IMongoCollection<CustomersPasswords> _passwordsCollection;
+        private readonly IMongoCollection<Passengers> _passengersCollection;
 
         public Login()
         {
             InitializeComponent();
 
             var mongoService = new MongoDBservices();
-            _passwordsCollection = mongoService.GetPasswordsCollection();
+            _passengersCollection = mongoService.GetPassengersCollection();
         }
 
         private void label8_Click(object sender, EventArgs e)
@@ -38,39 +38,26 @@ namespace Semesterproject
 
         private void lbl_signUp_Click(object sender, EventArgs e)
         {
+            btn_login.Enabled = true;
 
-            if (txt_role.Text != "Customer" && txt_role.Text != "Admin")
+            if (txt_role.Text == "" || txt_pass.Text == "" || txt_user.Text == "")
             {
-                MessageBox.Show("Role is only Customer OR Admin.");
+                MessageBox.Show("First, Fill All Fields !");
+            }
+            else if (txt_role.Text != "Admin" && txt_role.Text != "Customer")
+            {
+                MessageBox.Show("Type Role as Admin/Customer.");
             }
             else if (txt_role.Text == "Admin")
             {
-                MessageBox.Show("Admin Can't SingUp");
-            }
-            else if (txt_pass.Text == "" || txt_user.Text == "" || txt_role.Text == "")
-            {
-                MessageBox.Show("Missing Information.");
+                MessageBox.Show("Sorry, Admins Can't SignUp!!");
+                btn_login.Enabled = false;
             }
             else
             {
-                string user = txt_user.Text;
-                string pass = txt_pass.Text;
-                string role = txt_role.Text;
-
-                var passwords = new CustomersPasswords
-                {
-                    Password = pass,
-                    UserName = user,
-                    Role = role
-                };
-
-                _passwordsCollection.InsertOne(passwords);
-
-                MessageBox.Show("Successfully SignUp.! Now Login Again.");
-
-                txt_pass.Text = "";
-                txt_user.Text = "";
-                txt_role.Text = "";
+                SignUp SP = new SignUp(txt_user.Text, txt_pass.Text, txt_role.Text);
+                SP.Show();
+                this.Hide();
             }
         }
 
@@ -81,28 +68,27 @@ namespace Semesterproject
 
         private void btn_login_Click(object sender, EventArgs e)
         {
-            if (txt_pass.Text == "" || txt_user.Text == "")
+            if (txt_pass.Text == "" || txt_user.Text == "" || txt_CNIC.Text == "" || txt_role.Text == "")
             {
                 MessageBox.Show("Missing Information.");
             }
             else
             {
-                var ticketFilter = Builders<CustomersPasswords>.Filter.Eq("UserName", txt_user.Text);
-                var Found = _passwordsCollection.Find(ticketFilter).FirstOrDefault();
+                var ticketFilter = Builders<Passengers>.Filter.Eq("CNIC", txt_CNIC.Text);
+                var Found = _passengersCollection.Find(ticketFilter).FirstOrDefault();
 
                 if (Found != null)
                 {
-                    if (txt_user.Text == Found.UserName && txt_pass.Text == Found.Password && txt_role.Text == Found.Role)
+                    if (txt_user.Text == Found.PassName && txt_pass.Text == Found.Password && txt_role.Text == Found.Role && txt_CNIC.Text == Found.CNIC)
                     {
 
                         if (Found.Role == "Customer")
                         {
-
                             btn_update BU = new btn_update();
                             BU.Show();
                             this.Hide();
                         }
-                        else if(Found.Role == "Admin")
+                        else if (Found.Role == "Admin")
                         {
                             Home BU = new Home();
                             BU.Show();
@@ -116,10 +102,28 @@ namespace Semesterproject
                 }
                 else
                 {
-                    MessageBox.Show("Passenger Not Found: Check the username entered.");
+                    MessageBox.Show("Invalid CNIC !!!");
                 }
-
             }
+        }
+
+        private void txt_role_Leave(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txt_role_Enter(object sender, EventArgs e)
+        {
+            lbl_signUp.Enabled = true;
+            btn_login.Enabled = true;
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+            txt_CNIC.Text = "";
+            txt_pass.Text = "";
+            txt_role.Text = "";
+            txt_user.Text = "";
         }
     }
 }

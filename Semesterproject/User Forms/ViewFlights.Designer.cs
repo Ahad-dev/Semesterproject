@@ -56,7 +56,7 @@
             // 
             dataGridViewCellStyle1.BackColor = Color.White;
             guna2DataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            guna2DataGridView1.BackgroundColor = Color.DarkGreen;
+            guna2DataGridView1.BackgroundColor = Color.LightGreen;
             dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = Color.FromArgb(100, 88, 255);
             dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F);
@@ -87,7 +87,7 @@
             guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.ForeColor = Color.Empty;
             guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = Color.Empty;
             guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = Color.Empty;
-            guna2DataGridView1.ThemeStyle.BackColor = Color.DarkGreen;
+            guna2DataGridView1.ThemeStyle.BackColor = Color.LightGreen;
             guna2DataGridView1.ThemeStyle.GridColor = Color.FromArgb(231, 229, 255);
             guna2DataGridView1.ThemeStyle.HeaderStyle.BackColor = Color.Black;
             guna2DataGridView1.ThemeStyle.HeaderStyle.BorderStyle = DataGridViewHeaderBorderStyle.None;

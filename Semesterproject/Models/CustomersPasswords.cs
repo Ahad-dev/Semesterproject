@@ -6,7 +6,7 @@ namespace Semesterproject.Models
     public class CustomersPasswords
     {
         [BsonId]
-        public ObjectId Id { get; set; }
+        public string? CNIC { get; set; }
 
         [BsonElement("UserName")]
         public string? UserName { get; set; }
@@ -17,5 +17,19 @@ namespace Semesterproject.Models
         [BsonElement("Role")]
         public string? Role { get; set; }
 
+        [BsonElement("Passport")]
+        public string? Passport { get; set; }
+
+        [BsonElement("PassAddress")]
+        public string? PassAddress { get; set; }
+
+        [BsonElement("PassNationality")]
+        public string? PassNationality { get; set; }
+
+        [BsonElement("PassGender")]
+        public string? PassGender { get; set; }
+
+        [BsonElement("PassPhone")]
+        public string? PassPhone { get; set; }
     }
 }

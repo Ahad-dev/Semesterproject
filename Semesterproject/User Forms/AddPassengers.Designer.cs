@@ -58,6 +58,12 @@
             pictureBox9 = new PictureBox();
             llb_view = new Label();
             lbl_home = new Label();
+            panel9 = new Panel();
+            pictureBox8 = new PictureBox();
+            txt_CNIC = new TextBox();
+            pictureBox10 = new PictureBox();
+            lbl_count = new Label();
+            label4 = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox7).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox6).BeginInit();
@@ -66,13 +72,16 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox9).BeginInit();
+            panel9.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox8).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox10).BeginInit();
             SuspendLayout();
             // 
             // label2
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Century Gothic", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label2.Location = new Point(440, 66);
+            label2.Location = new Point(511, 61);
             label2.Name = "label2";
             label2.Size = new Size(222, 27);
             label2.TabIndex = 29;
@@ -82,7 +91,7 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Century Gothic", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(392, 30);
+            label1.Location = new Point(459, 34);
             label1.Name = "label1";
             label1.Size = new Size(331, 27);
             label1.TabIndex = 28;
@@ -90,14 +99,14 @@
             // 
             // btn_record
             // 
-            btn_record.BackColor = Color.SaddleBrown;
+            btn_record.BackColor = Color.FromArgb(13, 17, 55);
             btn_record.Cursor = Cursors.AppStarting;
             btn_record.FlatStyle = FlatStyle.Flat;
             btn_record.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btn_record.ForeColor = SystemColors.Info;
-            btn_record.Location = new Point(432, 546);
+            btn_record.Location = new Point(489, 630);
             btn_record.Name = "btn_record";
-            btn_record.Size = new Size(250, 45);
+            btn_record.Size = new Size(252, 42);
             btn_record.TabIndex = 38;
             btn_record.Text = "Record";
             btn_record.UseVisualStyleBackColor = false;
@@ -109,7 +118,7 @@
             pictureBox1.Image = Properties.Resources.pexels_timmossholder_15939942;
             pictureBox1.Location = new Point(0, 0);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(354, 669);
+            pictureBox1.Size = new Size(393, 724);
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox1.TabIndex = 40;
             pictureBox1.TabStop = false;
@@ -117,12 +126,12 @@
             // label10
             // 
             label10.AutoSize = true;
-            label10.BackColor = Color.SaddleBrown;
-            label10.Font = new Font("Century Gothic", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label10.ForeColor = SystemColors.Info;
-            label10.Location = new Point(771, 1);
+            label10.BackColor = Color.Cornsilk;
+            label10.Font = new Font("Century Gothic", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label10.ForeColor = Color.FromArgb(13, 17, 55);
+            label10.Location = new Point(796, 4);
             label10.Name = "label10";
-            label10.Size = new Size(28, 27);
+            label10.Size = new Size(34, 34);
             label10.TabIndex = 41;
             label10.Text = "X";
             label10.Click += label10_Click;
@@ -131,18 +140,19 @@
             // 
             lbl_Clear.AutoSize = true;
             lbl_Clear.Font = new Font("Times New Roman", 10.8F, FontStyle.Underline, GraphicsUnit.Point, 0);
-            lbl_Clear.Location = new Point(588, 495);
+            lbl_Clear.Location = new Point(646, 571);
             lbl_Clear.Name = "lbl_Clear";
             lbl_Clear.Size = new Size(94, 20);
             lbl_Clear.TabIndex = 99;
             lbl_Clear.Text = "Clear Fields";
+            lbl_Clear.Click += lbl_Clear_Click;
             // 
             // txt_phone
             // 
             txt_phone.BackColor = Color.Cornsilk;
             txt_phone.BorderStyle = BorderStyle.None;
-            txt_phone.Font = new Font("Segoe UI Emoji", 10.8F);
-            txt_phone.Location = new Point(464, 445);
+            txt_phone.Font = new Font("Century Gothic", 13.8F);
+            txt_phone.Location = new Point(524, 522);
             txt_phone.Multiline = true;
             txt_phone.Name = "txt_phone";
             txt_phone.Size = new Size(198, 34);
@@ -152,8 +162,8 @@
             // 
             txt_nationality.BackColor = Color.Cornsilk;
             txt_nationality.BorderStyle = BorderStyle.None;
-            txt_nationality.Font = new Font("Segoe UI Emoji", 10.8F);
-            txt_nationality.Location = new Point(464, 394);
+            txt_nationality.Font = new Font("Century Gothic", 13.8F);
+            txt_nationality.Location = new Point(524, 471);
             txt_nationality.Multiline = true;
             txt_nationality.Name = "txt_nationality";
             txt_nationality.Size = new Size(198, 34);
@@ -163,8 +173,8 @@
             // 
             txt_Passport.BackColor = Color.Cornsilk;
             txt_Passport.BorderStyle = BorderStyle.None;
-            txt_Passport.Font = new Font("Segoe UI Emoji", 10.8F);
-            txt_Passport.Location = new Point(464, 343);
+            txt_Passport.Font = new Font("Century Gothic", 13.8F);
+            txt_Passport.Location = new Point(524, 420);
             txt_Passport.Multiline = true;
             txt_Passport.Name = "txt_Passport";
             txt_Passport.Size = new Size(198, 34);
@@ -174,8 +184,8 @@
             // 
             txt_passGender.BackColor = Color.Cornsilk;
             txt_passGender.BorderStyle = BorderStyle.None;
-            txt_passGender.Font = new Font("Segoe UI Emoji", 10.8F);
-            txt_passGender.Location = new Point(464, 293);
+            txt_passGender.Font = new Font("Century Gothic", 13.8F);
+            txt_passGender.Location = new Point(524, 370);
             txt_passGender.Multiline = true;
             txt_passGender.Name = "txt_passGender";
             txt_passGender.Size = new Size(198, 34);
@@ -185,8 +195,8 @@
             // 
             txt_passAddress.BackColor = Color.Cornsilk;
             txt_passAddress.BorderStyle = BorderStyle.None;
-            txt_passAddress.Font = new Font("Segoe UI Emoji", 10.8F);
-            txt_passAddress.Location = new Point(464, 246);
+            txt_passAddress.Font = new Font("Century Gothic", 13.8F);
+            txt_passAddress.Location = new Point(524, 324);
             txt_passAddress.Multiline = true;
             txt_passAddress.Name = "txt_passAddress";
             txt_passAddress.Size = new Size(198, 34);
@@ -196,8 +206,8 @@
             // 
             txt_passName.BackColor = Color.Cornsilk;
             txt_passName.BorderStyle = BorderStyle.None;
-            txt_passName.Font = new Font("Segoe UI Emoji", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txt_passName.Location = new Point(464, 196);
+            txt_passName.Font = new Font("Century Gothic", 13.8F);
+            txt_passName.Location = new Point(524, 274);
             txt_passName.Multiline = true;
             txt_passName.Name = "txt_passName";
             txt_passName.Size = new Size(198, 34);
@@ -207,8 +217,8 @@
             // 
             txt_passengerid.BackColor = Color.Cornsilk;
             txt_passengerid.BorderStyle = BorderStyle.None;
-            txt_passengerid.Font = new Font("Segoe UI Emoji", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txt_passengerid.Location = new Point(464, 145);
+            txt_passengerid.Font = new Font("Century Gothic", 13.8F);
+            txt_passengerid.Location = new Point(524, 222);
             txt_passengerid.Multiline = true;
             txt_passengerid.Name = "txt_passengerid";
             txt_passengerid.Size = new Size(198, 34);
@@ -218,7 +228,7 @@
             // 
             panel7.BackColor = SystemColors.ActiveCaptionText;
             panel7.ForeColor = SystemColors.MenuHighlight;
-            panel7.Location = new Point(428, 480);
+            panel7.Location = new Point(488, 559);
             panel7.Name = "panel7";
             panel7.Size = new Size(251, 3);
             panel7.TabIndex = 84;
@@ -226,7 +236,7 @@
             // pictureBox7
             // 
             pictureBox7.Image = (Image)resources.GetObject("pictureBox7.Image");
-            pictureBox7.Location = new Point(428, 444);
+            pictureBox7.Location = new Point(488, 523);
             pictureBox7.Name = "pictureBox7";
             pictureBox7.Size = new Size(30, 30);
             pictureBox7.SizeMode = PictureBoxSizeMode.Zoom;
@@ -237,7 +247,7 @@
             // 
             panel6.BackColor = SystemColors.ActiveCaptionText;
             panel6.ForeColor = SystemColors.MenuHighlight;
-            panel6.Location = new Point(428, 429);
+            panel6.Location = new Point(488, 508);
             panel6.Name = "panel6";
             panel6.Size = new Size(251, 3);
             panel6.TabIndex = 85;
@@ -245,7 +255,7 @@
             // pictureBox6
             // 
             pictureBox6.Image = (Image)resources.GetObject("pictureBox6.Image");
-            pictureBox6.Location = new Point(428, 393);
+            pictureBox6.Location = new Point(488, 472);
             pictureBox6.Name = "pictureBox6";
             pictureBox6.Size = new Size(30, 30);
             pictureBox6.SizeMode = PictureBoxSizeMode.Zoom;
@@ -256,7 +266,7 @@
             // 
             panel5.BackColor = SystemColors.ActiveCaptionText;
             panel5.ForeColor = SystemColors.MenuHighlight;
-            panel5.Location = new Point(428, 378);
+            panel5.Location = new Point(488, 457);
             panel5.Name = "panel5";
             panel5.Size = new Size(251, 3);
             panel5.TabIndex = 86;
@@ -264,7 +274,7 @@
             // pictureBox5
             // 
             pictureBox5.Image = (Image)resources.GetObject("pictureBox5.Image");
-            pictureBox5.Location = new Point(428, 342);
+            pictureBox5.Location = new Point(488, 421);
             pictureBox5.Name = "pictureBox5";
             pictureBox5.Size = new Size(30, 30);
             pictureBox5.SizeMode = PictureBoxSizeMode.Zoom;
@@ -275,7 +285,7 @@
             // 
             panel4.BackColor = SystemColors.ActiveCaptionText;
             panel4.ForeColor = SystemColors.MenuHighlight;
-            panel4.Location = new Point(428, 328);
+            panel4.Location = new Point(488, 407);
             panel4.Name = "panel4";
             panel4.Size = new Size(251, 3);
             panel4.TabIndex = 87;
@@ -283,7 +293,7 @@
             // pictureBox4
             // 
             pictureBox4.Image = (Image)resources.GetObject("pictureBox4.Image");
-            pictureBox4.Location = new Point(429, 196);
+            pictureBox4.Location = new Point(489, 275);
             pictureBox4.Name = "pictureBox4";
             pictureBox4.Size = new Size(30, 30);
             pictureBox4.SizeMode = PictureBoxSizeMode.Zoom;
@@ -294,7 +304,7 @@
             // 
             panel3.BackColor = SystemColors.ActiveCaptionText;
             panel3.ForeColor = SystemColors.MenuHighlight;
-            panel3.Location = new Point(428, 282);
+            panel3.Location = new Point(488, 361);
             panel3.Name = "panel3";
             panel3.Size = new Size(251, 3);
             panel3.TabIndex = 88;
@@ -302,7 +312,7 @@
             // pictureBox3
             // 
             pictureBox3.Image = (Image)resources.GetObject("pictureBox3.Image");
-            pictureBox3.Location = new Point(428, 144);
+            pictureBox3.Location = new Point(488, 223);
             pictureBox3.Name = "pictureBox3";
             pictureBox3.Size = new Size(30, 30);
             pictureBox3.SizeMode = PictureBoxSizeMode.Zoom;
@@ -313,7 +323,7 @@
             // 
             panel2.BackColor = SystemColors.ActiveCaptionText;
             panel2.ForeColor = SystemColors.MenuHighlight;
-            panel2.Location = new Point(428, 232);
+            panel2.Location = new Point(488, 311);
             panel2.Name = "panel2";
             panel2.Size = new Size(251, 3);
             panel2.TabIndex = 78;
@@ -322,7 +332,7 @@
             // 
             panel1.BackColor = SystemColors.ActiveCaptionText;
             panel1.ForeColor = SystemColors.MenuHighlight;
-            panel1.Location = new Point(428, 180);
+            panel1.Location = new Point(488, 259);
             panel1.Name = "panel1";
             panel1.Size = new Size(251, 3);
             panel1.TabIndex = 76;
@@ -330,7 +340,7 @@
             // pictureBox2
             // 
             pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
-            pictureBox2.Location = new Point(429, 246);
+            pictureBox2.Location = new Point(489, 325);
             pictureBox2.Name = "pictureBox2";
             pictureBox2.Size = new Size(30, 30);
             pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
@@ -340,7 +350,7 @@
             // pictureBox9
             // 
             pictureBox9.Image = (Image)resources.GetObject("pictureBox9.Image");
-            pictureBox9.Location = new Point(428, 292);
+            pictureBox9.Location = new Point(488, 371);
             pictureBox9.Name = "pictureBox9";
             pictureBox9.Size = new Size(30, 30);
             pictureBox9.SizeMode = PictureBoxSizeMode.Zoom;
@@ -351,7 +361,7 @@
             // 
             llb_view.AutoSize = true;
             llb_view.Font = new Font("Times New Roman", 10.8F, FontStyle.Underline, GraphicsUnit.Point, 0);
-            llb_view.Location = new Point(597, 596);
+            llb_view.Location = new Point(654, 677);
             llb_view.Name = "llb_view";
             llb_view.Size = new Size(85, 20);
             llb_view.TabIndex = 102;
@@ -362,19 +372,85 @@
             // 
             lbl_home.AutoSize = true;
             lbl_home.Font = new Font("Times New Roman", 10.8F, FontStyle.Underline, GraphicsUnit.Point, 0);
-            lbl_home.Location = new Point(432, 597);
+            lbl_home.Location = new Point(489, 676);
             lbl_home.Name = "lbl_home";
             lbl_home.Size = new Size(53, 20);
             lbl_home.TabIndex = 103;
             lbl_home.Text = "Home";
             lbl_home.Click += lbl_home_Click;
             // 
+            // panel9
+            // 
+            panel9.BackColor = SystemColors.ActiveCaptionText;
+            panel9.Controls.Add(pictureBox8);
+            panel9.Location = new Point(483, 209);
+            panel9.Name = "panel9";
+            panel9.Size = new Size(251, 3);
+            panel9.TabIndex = 133;
+            // 
+            // pictureBox8
+            // 
+            pictureBox8.Image = (Image)resources.GetObject("pictureBox8.Image");
+            pictureBox8.Location = new Point(135, -13);
+            pictureBox8.Name = "pictureBox8";
+            pictureBox8.Size = new Size(30, 30);
+            pictureBox8.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox8.TabIndex = 80;
+            pictureBox8.TabStop = false;
+            // 
+            // txt_CNIC
+            // 
+            txt_CNIC.BackColor = Color.Cornsilk;
+            txt_CNIC.BorderStyle = BorderStyle.None;
+            txt_CNIC.Font = new Font("Century Gothic", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txt_CNIC.ForeColor = Color.Black;
+            txt_CNIC.Location = new Point(527, 176);
+            txt_CNIC.Name = "txt_CNIC";
+            txt_CNIC.Size = new Size(212, 29);
+            txt_CNIC.TabIndex = 132;
+            txt_CNIC.Leave += txt_CNIC_Leave;
+            // 
+            // pictureBox10
+            // 
+            pictureBox10.Image = (Image)resources.GetObject("pictureBox10.Image");
+            pictureBox10.Location = new Point(488, 173);
+            pictureBox10.Name = "pictureBox10";
+            pictureBox10.Size = new Size(30, 30);
+            pictureBox10.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox10.TabIndex = 131;
+            pictureBox10.TabStop = false;
+            // 
+            // lbl_count
+            // 
+            lbl_count.AutoSize = true;
+            lbl_count.Font = new Font("Century Gothic", 12F, FontStyle.Underline, GraphicsUnit.Point, 0);
+            lbl_count.Location = new Point(662, 111);
+            lbl_count.Name = "lbl_count";
+            lbl_count.Size = new Size(32, 23);
+            lbl_count.TabIndex = 134;
+            lbl_count.Text = "23";
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Font = new Font("Century Gothic", 12F, FontStyle.Underline, GraphicsUnit.Point, 0);
+            label4.Location = new Point(516, 111);
+            label4.Name = "label4";
+            label4.Size = new Size(148, 23);
+            label4.TabIndex = 135;
+            label4.Text = "UnApproved :";
+            // 
             // AddPassengers
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Cornsilk;
-            ClientSize = new Size(800, 669);
+            ClientSize = new Size(844, 724);
+            Controls.Add(label4);
+            Controls.Add(lbl_count);
+            Controls.Add(panel9);
+            Controls.Add(txt_CNIC);
+            Controls.Add(pictureBox10);
             Controls.Add(lbl_home);
             Controls.Add(llb_view);
             Controls.Add(pictureBox9);
@@ -417,6 +493,9 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox9).EndInit();
+            panel9.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)pictureBox8).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox10).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -451,5 +530,11 @@
         private PictureBox pictureBox9;
         private Label llb_view;
         private Label lbl_home;
+        private Panel panel9;
+        private PictureBox pictureBox8;
+        private TextBox txt_CNIC;
+        private PictureBox pictureBox10;
+        private Label lbl_count;
+        private Label label4;
     }
 }

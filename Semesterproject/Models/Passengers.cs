@@ -17,6 +17,15 @@ namespace Semesterproject.Models
         [BsonElement("PassName")]
         public string? PassName { get; set; }
 
+        [BsonElement("CNIC")]
+        public string? CNIC { get; set; }
+
+        [BsonElement("Password")]
+        public string? Password { get; set; }
+
+        [BsonElement("Role")]
+        public string? Role { get; set; }
+
         [BsonElement("Passport")]
         public string? Passport { get; set; }
 

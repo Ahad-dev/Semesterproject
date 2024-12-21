@@ -16,18 +16,19 @@ namespace Semesterproject.Services
         private readonly IMongoCollection<TicketsTable> _ticketsCollection;
         private readonly IMongoCollection<Cancellation> _cancelTicketCollection;
         private readonly IMongoCollection<CustomersPasswords> _passwordsCollection;
+        private readonly IMongoCollection<Report> _reportscollection;
 
         public MongoDBservices()
         {
             var client = new MongoClient("mongodb://localhost:27017/");
             var database = client.GetDatabase("AirLineDatabase");
 
-            // Adding Tables
             _passengersCollection = database.GetCollection<Passengers>("PassengersCollection");
             _flightsCollection = database.GetCollection<FlightsRecords>("FlightsCollection");
             _ticketsCollection = database.GetCollection<TicketsTable>("TicketsCollection");
             _cancelTicketCollection = database.GetCollection<Cancellation>("CancelTicketsCollection");
             _passwordsCollection = database.GetCollection<CustomersPasswords>("PasswordsCollection");
+            _reportscollection = database.GetCollection<Report>("ReportsCollection");
         }
 
         public IMongoCollection<Passengers> GetPassengersCollection()
@@ -52,6 +53,11 @@ namespace Semesterproject.Services
         public IMongoCollection<CustomersPasswords> GetPasswordsCollection()
         {
             return _passwordsCollection;
+        }
+
+        public IMongoCollection<Report> GetReportsCollection()
+        {
+            return _reportscollection;
         }
     }
 }

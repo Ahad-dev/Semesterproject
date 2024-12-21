@@ -49,9 +49,9 @@
             label9 = new Label();
             txt_Phone = new TextBox();
             txt_PassNation = new TextBox();
-            txt_PassAdress = new TextBox();
+            txt_Passport = new TextBox();
             guna2DataGridView1 = new Guna.UI2.WinForms.Guna2DataGridView();
-            txt_passport = new TextBox();
+            txt_CNIC = new TextBox();
             panel1 = new Panel();
             lbl_exit = new Label();
             ((System.ComponentModel.ISupportInitialize)guna2DataGridView1).BeginInit();
@@ -146,19 +146,23 @@
             // 
             // txt_PassName
             // 
-            txt_PassName.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            txt_PassName.Location = new Point(582, 115);
+            txt_PassName.Font = new Font("Century Gothic", 13.8F);
+            txt_PassName.Location = new Point(582, 114);
             txt_PassName.Name = "txt_PassName";
-            txt_PassName.Size = new Size(187, 32);
+            txt_PassName.Size = new Size(187, 36);
             txt_PassName.TabIndex = 42;
+            txt_PassName.TextAlign = HorizontalAlignment.Center;
             // 
             // txt_PassId
             // 
-            txt_PassId.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            txt_PassId.Location = new Point(179, 113);
+            txt_PassId.Font = new Font("Century Gothic", 13.8F);
+            txt_PassId.Location = new Point(179, 111);
             txt_PassId.Name = "txt_PassId";
-            txt_PassId.Size = new Size(187, 32);
+            txt_PassId.Size = new Size(187, 36);
             txt_PassId.TabIndex = 41;
+            txt_PassId.TextAlign = HorizontalAlignment.Center;
+            txt_PassId.Enter += txt_PassId_Enter;
+            txt_PassId.Leave += txt_PassId_Leave;
             // 
             // label6
             // 
@@ -166,9 +170,9 @@
             label6.Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label6.Location = new Point(433, 162);
             label6.Name = "label6";
-            label6.Size = new Size(141, 23);
+            label6.Size = new Size(92, 23);
             label6.TabIndex = 40;
-            label6.Text = "Pass. Address";
+            label6.Text = "Passport";
             // 
             // label5
             // 
@@ -197,20 +201,20 @@
             label3.Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label3.Location = new Point(30, 161);
             label3.Name = "label3";
-            label3.Size = new Size(142, 23);
+            label3.Size = new Size(110, 23);
             label3.TabIndex = 37;
-            label3.Text = "Pass. Number";
+            label3.Text = "Pass CNIC";
             // 
             // txt_Gender
             // 
             txt_Gender.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
             txt_Gender.AutoCompleteSource = AutoCompleteSource.FileSystem;
-            txt_Gender.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            txt_Gender.Font = new Font("Century Gothic", 13.8F);
             txt_Gender.FormattingEnabled = true;
             txt_Gender.Items.AddRange(new object[] { "Male", "Female", "None" });
-            txt_Gender.Location = new Point(583, 206);
+            txt_Gender.Location = new Point(583, 204);
             txt_Gender.Name = "txt_Gender";
-            txt_Gender.Size = new Size(187, 31);
+            txt_Gender.Size = new Size(187, 35);
             txt_Gender.TabIndex = 54;
             // 
             // label1
@@ -235,27 +239,30 @@
             // 
             // txt_Phone
             // 
-            txt_Phone.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            txt_Phone.Location = new Point(388, 254);
+            txt_Phone.Font = new Font("Century Gothic", 13.8F);
+            txt_Phone.Location = new Point(388, 253);
             txt_Phone.Name = "txt_Phone";
-            txt_Phone.Size = new Size(187, 32);
+            txt_Phone.Size = new Size(187, 36);
             txt_Phone.TabIndex = 55;
+            txt_Phone.TextAlign = HorizontalAlignment.Center;
             // 
             // txt_PassNation
             // 
-            txt_PassNation.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            txt_PassNation.Location = new Point(179, 203);
+            txt_PassNation.Font = new Font("Century Gothic", 13.8F);
+            txt_PassNation.Location = new Point(179, 201);
             txt_PassNation.Name = "txt_PassNation";
-            txt_PassNation.Size = new Size(187, 32);
+            txt_PassNation.Size = new Size(187, 36);
             txt_PassNation.TabIndex = 56;
+            txt_PassNation.TextAlign = HorizontalAlignment.Center;
             // 
-            // txt_PassAdress
+            // txt_Passport
             // 
-            txt_PassAdress.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            txt_PassAdress.Location = new Point(582, 158);
-            txt_PassAdress.Name = "txt_PassAdress";
-            txt_PassAdress.Size = new Size(187, 32);
-            txt_PassAdress.TabIndex = 57;
+            txt_Passport.Font = new Font("Century Gothic", 13.8F);
+            txt_Passport.Location = new Point(582, 157);
+            txt_Passport.Name = "txt_Passport";
+            txt_Passport.Size = new Size(187, 36);
+            txt_Passport.TabIndex = 57;
+            txt_Passport.TextAlign = HorizontalAlignment.Center;
             // 
             // guna2DataGridView1
             // 
@@ -310,13 +317,14 @@
             guna2DataGridView1.ThemeStyle.RowsStyle.SelectionForeColor = Color.FromArgb(71, 69, 94);
             guna2DataGridView1.CellContentClick += guna2DataGridView1_CellContentClick;
             // 
-            // txt_passport
+            // txt_CNIC
             // 
-            txt_passport.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            txt_passport.Location = new Point(179, 160);
-            txt_passport.Name = "txt_passport";
-            txt_passport.Size = new Size(187, 32);
-            txt_passport.TabIndex = 59;
+            txt_CNIC.Font = new Font("Century Gothic", 13.8F);
+            txt_CNIC.Location = new Point(179, 156);
+            txt_CNIC.Name = "txt_CNIC";
+            txt_CNIC.Size = new Size(187, 36);
+            txt_CNIC.TabIndex = 59;
+            txt_CNIC.TextAlign = HorizontalAlignment.Center;
             // 
             // panel1
             // 
@@ -346,9 +354,9 @@
             BackColor = Color.MintCream;
             ClientSize = new Size(801, 617);
             Controls.Add(panel1);
-            Controls.Add(txt_passport);
+            Controls.Add(txt_CNIC);
             Controls.Add(guna2DataGridView1);
-            Controls.Add(txt_PassAdress);
+            Controls.Add(txt_Passport);
             Controls.Add(txt_PassNation);
             Controls.Add(txt_Phone);
             Controls.Add(txt_Gender);
@@ -399,9 +407,9 @@
         private Label label9;
         private TextBox txt_Phone;
         private TextBox txt_PassNation;
-        private TextBox txt_PassAdress;
+        private TextBox txt_Passport;
         private Guna.UI2.WinForms.Guna2DataGridView guna2DataGridView1;
-        private TextBox txt_passport;
+        private TextBox txt_CNIC;
         private Panel panel1;
         private Label lbl_exit;
     }

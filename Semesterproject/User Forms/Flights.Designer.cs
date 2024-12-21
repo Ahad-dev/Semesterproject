@@ -111,14 +111,15 @@
             txt_FlCode.AccessibleRole = AccessibleRole.TitleBar;
             txt_FlCode.BackColor = Color.Lavender;
             txt_FlCode.BorderStyle = BorderStyle.None;
-            txt_FlCode.Font = new Font("Segoe UI Emoji", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txt_FlCode.Font = new Font("Century Gothic", 13.8F);
             txt_FlCode.ForeColor = SystemColors.InactiveCaption;
             txt_FlCode.Location = new Point(124, 122);
             txt_FlCode.Multiline = true;
             txt_FlCode.Name = "txt_FlCode";
             txt_FlCode.Size = new Size(198, 34);
             txt_FlCode.TabIndex = 94;
-            txt_FlCode.Text = "Enter Flight Code...";
+            txt_FlCode.Text = "Flight Code";
+            txt_FlCode.TextAlign = HorizontalAlignment.Center;
             txt_FlCode.Enter += txt_FlCode_Enter;
             txt_FlCode.Leave += txt_FlCode_Leave;
             // 
@@ -146,14 +147,15 @@
             cmx_source.AccessibleRole = AccessibleRole.TitleBar;
             cmx_source.BackColor = Color.Lavender;
             cmx_source.BorderStyle = BorderStyle.None;
-            cmx_source.Font = new Font("Segoe UI Emoji", 12F);
+            cmx_source.Font = new Font("Century Gothic", 13.8F);
             cmx_source.ForeColor = SystemColors.InactiveCaption;
             cmx_source.Location = new Point(124, 199);
             cmx_source.Multiline = true;
             cmx_source.Name = "cmx_source";
             cmx_source.Size = new Size(198, 34);
             cmx_source.TabIndex = 97;
-            cmx_source.Text = "Enter Source...";
+            cmx_source.Text = "Source";
+            cmx_source.TextAlign = HorizontalAlignment.Center;
             cmx_source.Enter += cmx_source_Enter;
             cmx_source.Leave += cmx_source_Leave;
             // 
@@ -181,14 +183,15 @@
             cmx_destination.AccessibleRole = AccessibleRole.TitleBar;
             cmx_destination.BackColor = Color.Lavender;
             cmx_destination.BorderStyle = BorderStyle.None;
-            cmx_destination.Font = new Font("Segoe UI Emoji", 12F);
+            cmx_destination.Font = new Font("Century Gothic", 13.8F);
             cmx_destination.ForeColor = SystemColors.InactiveCaption;
             cmx_destination.Location = new Point(122, 271);
             cmx_destination.Multiline = true;
             cmx_destination.Name = "cmx_destination";
             cmx_destination.Size = new Size(198, 34);
             cmx_destination.TabIndex = 100;
-            cmx_destination.Text = "Enter Destination...";
+            cmx_destination.Text = "Destination";
+            cmx_destination.TextAlign = HorizontalAlignment.Center;
             cmx_destination.Enter += cmx_destination_Enter;
             cmx_destination.Leave += cmx_destination_Leave;
             // 
@@ -217,14 +220,15 @@
             txt_seats.AccessibleRole = AccessibleRole.TitleBar;
             txt_seats.BackColor = Color.Lavender;
             txt_seats.BorderStyle = BorderStyle.None;
-            txt_seats.Font = new Font("Segoe UI Emoji", 12F);
+            txt_seats.Font = new Font("Century Gothic", 13.8F);
             txt_seats.ForeColor = SystemColors.InactiveCaption;
             txt_seats.Location = new Point(122, 342);
             txt_seats.Multiline = true;
             txt_seats.Name = "txt_seats";
             txt_seats.Size = new Size(198, 34);
             txt_seats.TabIndex = 103;
-            txt_seats.Text = "Enter Total Seats...";
+            txt_seats.Text = "Total Seats";
+            txt_seats.TextAlign = HorizontalAlignment.Center;
             txt_seats.Enter += txt_seats_Enter;
             txt_seats.Leave += txt_seats_Leave;
             // 
@@ -273,9 +277,10 @@
             cmx_date.CalendarMonthBackground = Color.FromArgb(128, 64, 64);
             cmx_date.CalendarTitleBackColor = SystemColors.ControlDark;
             cmx_date.CalendarTitleForeColor = SystemColors.ActiveCaption;
+            cmx_date.Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             cmx_date.Location = new Point(122, 414);
             cmx_date.Name = "cmx_date";
-            cmx_date.Size = new Size(198, 27);
+            cmx_date.Size = new Size(208, 32);
             cmx_date.TabIndex = 107;
             cmx_date.UseWaitCursor = true;
             // 
