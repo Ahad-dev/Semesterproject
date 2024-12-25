@@ -63,12 +63,13 @@
             btn_Pass.FillColor2 = Color.Navy;
             btn_Pass.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btn_Pass.ForeColor = Color.White;
-            btn_Pass.Location = new Point(92, 491);
+            btn_Pass.ImageSize = new Size(20, 18);
+            btn_Pass.Location = new Point(92, 512);
             btn_Pass.Name = "btn_Pass";
             btn_Pass.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            btn_Pass.Size = new Size(158, 55);
+            btn_Pass.Size = new Size(158, 43);
             btn_Pass.TabIndex = 9;
-            btn_Pass.Text = "Update";
+            btn_Pass.Text = "Update Info";
             btn_Pass.Click += btn_Pass_Click;
             // 
             // lbl_exit
@@ -126,10 +127,11 @@
             btn_viewFlights.FillColor2 = Color.Navy;
             btn_viewFlights.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btn_viewFlights.ForeColor = Color.White;
-            btn_viewFlights.Location = new Point(266, 491);
+            btn_viewFlights.ImageSize = new Size(20, 18);
+            btn_viewFlights.Location = new Point(271, 512);
             btn_viewFlights.Name = "btn_viewFlights";
             btn_viewFlights.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            btn_viewFlights.Size = new Size(158, 55);
+            btn_viewFlights.Size = new Size(158, 43);
             btn_viewFlights.TabIndex = 12;
             btn_viewFlights.Text = "View Flights";
             btn_viewFlights.Click += btn_viewFlights_Click;
@@ -146,10 +148,11 @@
             btn_CancelTickets.FillColor2 = Color.Navy;
             btn_CancelTickets.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btn_CancelTickets.ForeColor = Color.White;
-            btn_CancelTickets.Location = new Point(442, 491);
+            btn_CancelTickets.ImageSize = new Size(20, 18);
+            btn_CancelTickets.Location = new Point(630, 512);
             btn_CancelTickets.Name = "btn_CancelTickets";
             btn_CancelTickets.ShadowDecoration.CustomizableEdges = customizableEdges6;
-            btn_CancelTickets.Size = new Size(174, 55);
+            btn_CancelTickets.Size = new Size(169, 43);
             btn_CancelTickets.TabIndex = 11;
             btn_CancelTickets.Text = "Cancel Ticket";
             btn_CancelTickets.Click += btn_CancelTickets_Click;
@@ -166,10 +169,11 @@
             btn_BookTicket.FillColor2 = Color.Navy;
             btn_BookTicket.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btn_BookTicket.ForeColor = Color.White;
-            btn_BookTicket.Location = new Point(634, 491);
+            btn_BookTicket.ImageSize = new Size(20, 18);
+            btn_BookTicket.Location = new Point(450, 512);
             btn_BookTicket.Name = "btn_BookTicket";
             btn_BookTicket.ShadowDecoration.CustomizableEdges = customizableEdges8;
-            btn_BookTicket.Size = new Size(158, 55);
+            btn_BookTicket.Size = new Size(158, 43);
             btn_BookTicket.TabIndex = 10;
             btn_BookTicket.Text = "Book Ticket";
             btn_BookTicket.Click += btn_BookTicket_Click;

@@ -47,7 +47,6 @@ namespace Semesterproject
 
         private void btn_record_Click(object sender, EventArgs e)
         {
-            
 
             if (txt_passengerid.Text == "" || txt_passName.Text == "" || txt_passAddress.Text == "" || txt_nationality.Text == "" || txt_passGender.Text == "" || txt_phone.Text == "" || txt_Passport.Text == "")
             {

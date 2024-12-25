@@ -74,5 +74,19 @@ namespace Semesterproject
         {
             Application.Exit();
         }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+            Home H = new Home();
+            H.Show();
+            this.Hide();
+        }
+
+        private void lbl_clears_Click(object sender, EventArgs e)
+        {
+            txt_reportID.Text = "";
+            txt_content.Text = "";
+            cmb_type.Text = "";
+        }
     }
 }

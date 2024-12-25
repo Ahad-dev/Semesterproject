@@ -28,12 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges15 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges17 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges18 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             panel1 = new Panel();
             lbl_exit = new Label();
             panel2 = new Panel();
@@ -50,6 +50,8 @@
             pictureBox1 = new PictureBox();
             cmb_type = new ComboBox();
             txt_content = new Guna.UI2.WinForms.Guna2TextBox();
+            label2 = new Label();
+            lbl_clears = new Label();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
@@ -110,7 +112,7 @@
             // 
             // btn_view
             // 
-            btn_view.CustomizableEdges = customizableEdges1;
+            btn_view.CustomizableEdges = customizableEdges13;
             btn_view.DisabledState.BorderColor = Color.DarkGray;
             btn_view.DisabledState.CustomBorderColor = Color.DarkGray;
             btn_view.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -118,9 +120,9 @@
             btn_view.FillColor = Color.FromArgb(49, 71, 58);
             btn_view.Font = new Font("Century Gothic", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btn_view.ForeColor = Color.White;
-            btn_view.Location = new Point(216, 487);
+            btn_view.Location = new Point(197, 473);
             btn_view.Name = "btn_view";
-            btn_view.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            btn_view.ShadowDecoration.CustomizableEdges = customizableEdges14;
             btn_view.Size = new Size(189, 54);
             btn_view.TabIndex = 4;
             btn_view.Text = "View Report";
@@ -128,7 +130,7 @@
             // 
             // btn_generate
             // 
-            btn_generate.CustomizableEdges = customizableEdges3;
+            btn_generate.CustomizableEdges = customizableEdges15;
             btn_generate.DisabledState.BorderColor = Color.DarkGray;
             btn_generate.DisabledState.CustomBorderColor = Color.DarkGray;
             btn_generate.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -136,9 +138,9 @@
             btn_generate.FillColor = Color.FromArgb(49, 71, 58);
             btn_generate.Font = new Font("Century Gothic", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btn_generate.ForeColor = Color.White;
-            btn_generate.Location = new Point(415, 487);
+            btn_generate.Location = new Point(419, 473);
             btn_generate.Name = "btn_generate";
-            btn_generate.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            btn_generate.ShadowDecoration.CustomizableEdges = customizableEdges16;
             btn_generate.Size = new Size(189, 54);
             btn_generate.TabIndex = 5;
             btn_generate.Text = "Generate Report";
@@ -147,7 +149,7 @@
             // txt_date
             // 
             txt_date.Font = new Font("Century Gothic", 13.8F);
-            txt_date.Location = new Point(368, 387);
+            txt_date.Location = new Point(362, 371);
             txt_date.Name = "txt_date";
             txt_date.Size = new Size(230, 36);
             txt_date.TabIndex = 66;
@@ -156,7 +158,7 @@
             // txt_reportID
             // 
             txt_reportID.Font = new Font("Century Gothic", 13.8F);
-            txt_reportID.Location = new Point(367, 231);
+            txt_reportID.Location = new Point(361, 215);
             txt_reportID.Name = "txt_reportID";
             txt_reportID.Size = new Size(230, 36);
             txt_reportID.TabIndex = 64;
@@ -166,7 +168,7 @@
             // 
             label6.AutoSize = true;
             label6.Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label6.Location = new Point(219, 392);
+            label6.Location = new Point(213, 376);
             label6.Name = "label6";
             label6.Size = new Size(110, 23);
             label6.TabIndex = 63;
@@ -176,7 +178,7 @@
             // 
             label5.AutoSize = true;
             label5.Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label5.Location = new Point(219, 339);
+            label5.Location = new Point(213, 323);
             label5.Name = "label5";
             label5.Size = new Size(90, 23);
             label5.TabIndex = 62;
@@ -187,7 +189,7 @@
             label4.AutoSize = true;
             label4.Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label4.ForeColor = SystemColors.ActiveCaptionText;
-            label4.Location = new Point(218, 234);
+            label4.Location = new Point(212, 218);
             label4.Name = "label4";
             label4.Size = new Size(101, 23);
             label4.TabIndex = 61;
@@ -197,7 +199,7 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label3.Location = new Point(218, 287);
+            label3.Location = new Point(212, 271);
             label3.Name = "label3";
             label3.Size = new Size(127, 23);
             label3.TabIndex = 60;
@@ -218,7 +220,7 @@
             cmb_type.Font = new Font("Century Gothic", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
             cmb_type.FormattingEnabled = true;
             cmb_type.Items.AddRange(new object[] { "FlightsReport", "PassengersReports", "TicketsReports", "CancellationReports" });
-            cmb_type.Location = new Point(367, 285);
+            cmb_type.Location = new Point(361, 269);
             cmb_type.Name = "cmb_type";
             cmb_type.Size = new Size(230, 35);
             cmb_type.TabIndex = 69;
@@ -227,7 +229,7 @@
             // 
             txt_content.BackColor = SystemColors.Window;
             txt_content.BorderColor = Color.Black;
-            txt_content.CustomizableEdges = customizableEdges5;
+            txt_content.CustomizableEdges = customizableEdges17;
             txt_content.DefaultText = "";
             txt_content.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             txt_content.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -236,15 +238,39 @@
             txt_content.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             txt_content.Font = new Font("Segoe UI", 9F);
             txt_content.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txt_content.Location = new Point(367, 336);
+            txt_content.Location = new Point(361, 320);
             txt_content.Margin = new Padding(3, 4, 3, 4);
             txt_content.Name = "txt_content";
             txt_content.PasswordChar = '\0';
             txt_content.PlaceholderText = "";
             txt_content.SelectedText = "";
-            txt_content.ShadowDecoration.CustomizableEdges = customizableEdges6;
+            txt_content.ShadowDecoration.CustomizableEdges = customizableEdges18;
             txt_content.Size = new Size(230, 36);
             txt_content.TabIndex = 70;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("Century Gothic", 12F, FontStyle.Underline, GraphicsUnit.Point, 0);
+            label2.ForeColor = SystemColors.ActiveCaptionText;
+            label2.Location = new Point(350, 567);
+            label2.Name = "label2";
+            label2.Size = new Size(123, 23);
+            label2.TabIndex = 71;
+            label2.Text = "Back Home";
+            label2.Click += label2_Click;
+            // 
+            // lbl_clears
+            // 
+            lbl_clears.AutoSize = true;
+            lbl_clears.Font = new Font("Century Gothic", 10.8F, FontStyle.Underline, GraphicsUnit.Point, 0);
+            lbl_clears.ForeColor = SystemColors.ActiveCaptionText;
+            lbl_clears.Location = new Point(506, 530);
+            lbl_clears.Name = "lbl_clears";
+            lbl_clears.Size = new Size(108, 21);
+            lbl_clears.TabIndex = 72;
+            lbl_clears.Text = "Clear Fields";
+            lbl_clears.Click += lbl_clears_Click;
             // 
             // Reports
             // 
@@ -252,6 +278,8 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(253, 246, 246);
             ClientSize = new Size(800, 627);
+            Controls.Add(lbl_clears);
+            Controls.Add(label2);
             Controls.Add(txt_content);
             Controls.Add(cmb_type);
             Controls.Add(pictureBox1);
@@ -296,5 +324,7 @@
         private ComboBox cmb_type;
         private Guna.UI2.WinForms.Guna2TextBox txt_content;
         private Label lbl_exit;
+        private Label label2;
+        private Label lbl_clears;
     }
 }

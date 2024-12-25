@@ -84,7 +84,7 @@ namespace Semesterproject
 
                         if (Found.Role == "Customer")
                         {
-                            btn_update BU = new btn_update();
+                            btn_update BU = new btn_update(Found.PassId.ToString());
                             BU.Show();
                             this.Hide();
                         }

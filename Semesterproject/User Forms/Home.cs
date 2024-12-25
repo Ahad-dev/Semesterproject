@@ -54,5 +54,12 @@ namespace Semesterproject
         {
             Application.Exit();
         }
+
+        private void guna2GradientTileButton1_Click_1(object sender, EventArgs e)
+        {
+            Reports R = new Reports();
+            R.Show();
+            this.Hide();
+        }
     }
 }

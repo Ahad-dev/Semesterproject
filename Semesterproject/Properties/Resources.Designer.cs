@@ -63,6 +63,16 @@ namespace Semesterproject.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Blue_And_Yellow_Digital_Marketing_Agency_Flyer {
+            get {
+                object obj = ResourceManager.GetObject("Blue And Yellow Digital Marketing Agency Flyer", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap destination {
             get {
                 object obj = ResourceManager.GetObject("destination", resourceCulture);
@@ -86,6 +96,16 @@ namespace Semesterproject.Properties {
         internal static System.Drawing.Bitmap pexels_matthardy_1928067 {
             get {
                 object obj = ResourceManager.GetObject("pexels-matthardy-1928067", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pexels_n_voitkevich_8830661 {
+            get {
+                object obj = ResourceManager.GetObject("pexels-n-voitkevich-8830661", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

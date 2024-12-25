@@ -95,11 +95,12 @@ namespace Semesterproject
         {
             txt_PassId.Text = guna2DataGridView1.SelectedRows[0].Cells[0].Value.ToString();
             txt_PassName.Text = guna2DataGridView1.SelectedRows[0].Cells[1].Value.ToString();
-            txt_Passport.Text = guna2DataGridView1.SelectedRows[0].Cells[3].Value.ToString();
-            txt_PassNation.Text = guna2DataGridView1.SelectedRows[0].Cells[4].Value.ToString();
             txt_CNIC.Text = guna2DataGridView1.SelectedRows[0].Cells[2].Value.ToString();
-            txt_Gender.Text = guna2DataGridView1.SelectedRows[0].Cells[5].Value.ToString();
+            txt_Passport.Text = guna2DataGridView1.SelectedRows[0].Cells[5].Value.ToString();
             txt_Phone.Text = guna2DataGridView1.SelectedRows[0].Cells[6].Value.ToString();
+            txt_PassNation.Text = guna2DataGridView1.SelectedRows[0].Cells[7].Value.ToString();
+            txt_Gender.Text = guna2DataGridView1.SelectedRows[0].Cells[8].Value.ToString();
+            txt_Phone.Text = guna2DataGridView1.SelectedRows[0].Cells[9].Value.ToString();
         }
 
         private void button3_Click(object sender, EventArgs e)

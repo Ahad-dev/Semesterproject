@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Semesterproject.User_Forms;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,8 +13,10 @@ namespace Semesterproject
 {
     public partial class btn_update : Form
     {
-        public btn_update()
+        string Id;
+        public btn_update(string ID)
         {
+            Id = ID;
             InitializeComponent();
         }
 
@@ -24,7 +27,9 @@ namespace Semesterproject
 
         private void btn_Pass_Click(object sender, EventArgs e)
         {
-
+            ChangeInfo CI = new ChangeInfo(Id);
+            CI.Show();
+            this.Hide();
         }
 
         private void label3_Click(object sender, EventArgs e)

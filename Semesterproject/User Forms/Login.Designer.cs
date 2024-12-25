@@ -117,7 +117,7 @@
             panel4.Controls.Add(pictureBox9);
             panel4.Location = new Point(73, 452);
             panel4.Name = "panel4";
-            panel4.Size = new Size(300, 4);
+            panel4.Size = new Size(300, 2);
             panel4.TabIndex = 93;
             // 
             // pictureBox9
@@ -172,7 +172,7 @@
             panel3.Controls.Add(pictureBox7);
             panel3.Location = new Point(76, 396);
             panel3.Name = "panel3";
-            panel3.Size = new Size(300, 4);
+            panel3.Size = new Size(300, 2);
             panel3.TabIndex = 89;
             // 
             // pictureBox7
@@ -266,7 +266,7 @@
             panel2.Controls.Add(pictureBox4);
             panel2.Location = new Point(76, 335);
             panel2.Name = "panel2";
-            panel2.Size = new Size(300, 4);
+            panel2.Size = new Size(300, 2);
             panel2.TabIndex = 82;
             // 
             // pictureBox4
@@ -308,7 +308,7 @@
             panel1.Controls.Add(pictureBox3);
             panel1.Location = new Point(76, 271);
             panel1.Name = "panel1";
-            panel1.Size = new Size(300, 4);
+            panel1.Size = new Size(300, 2);
             panel1.TabIndex = 2;
             // 
             // pictureBox3

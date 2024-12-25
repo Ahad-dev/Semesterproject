@@ -13,7 +13,6 @@ namespace Semesterproject.Models
     internal class TicketsTable
     {
         [BsonId]
-
         public string? TicketId { get; set; }
 
         [BsonElement("FlCode")]

@@ -54,16 +54,17 @@
             txt_content.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
             txt_content.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
             txt_content.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            txt_content.Font = new Font("Century Gothic", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txt_content.Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txt_content.ForeColor = Color.Black;
             txt_content.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txt_content.Location = new Point(169, 85);
-            txt_content.Margin = new Padding(4, 4, 4, 4);
+            txt_content.Location = new Point(168, 82);
+            txt_content.Margin = new Padding(6, 5, 6, 5);
             txt_content.Name = "txt_content";
             txt_content.PasswordChar = '\0';
             txt_content.PlaceholderText = "";
             txt_content.SelectedText = "";
             txt_content.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            txt_content.Size = new Size(588, 63);
+            txt_content.Size = new Size(589, 72);
             txt_content.TabIndex = 118;
             // 
             // txt_date

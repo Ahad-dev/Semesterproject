@@ -37,6 +37,8 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             panel1 = new Panel();
             lbl_exit = new Label();
             label1 = new Label();
@@ -48,6 +50,7 @@
             guna2GradientTileButton4 = new Guna.UI2.WinForms.Guna2GradientTileButton();
             label2 = new Label();
             pictureBox1 = new PictureBox();
+            guna2GradientTileButton1 = new Guna.UI2.WinForms.Guna2GradientTileButton();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
@@ -98,10 +101,10 @@
             btn_Pass.FillColor2 = Color.DarkRed;
             btn_Pass.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btn_Pass.ForeColor = Color.White;
-            btn_Pass.Location = new Point(102, 450);
+            btn_Pass.Location = new Point(58, 450);
             btn_Pass.Name = "btn_Pass";
             btn_Pass.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            btn_Pass.Size = new Size(158, 55);
+            btn_Pass.Size = new Size(150, 55);
             btn_Pass.TabIndex = 2;
             btn_Pass.Text = "Passengers";
             btn_Pass.Click += guna2GradientTileButton1_Click;
@@ -118,10 +121,10 @@
             guna2GradientTileButton2.FillColor2 = Color.DarkRed;
             guna2GradientTileButton2.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             guna2GradientTileButton2.ForeColor = Color.White;
-            guna2GradientTileButton2.Location = new Point(644, 450);
+            guna2GradientTileButton2.Location = new Point(544, 450);
             guna2GradientTileButton2.Name = "guna2GradientTileButton2";
             guna2GradientTileButton2.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            guna2GradientTileButton2.Size = new Size(158, 55);
+            guna2GradientTileButton2.Size = new Size(156, 55);
             guna2GradientTileButton2.TabIndex = 3;
             guna2GradientTileButton2.Text = "Cancellation";
             guna2GradientTileButton2.Click += guna2GradientTileButton2_Click;
@@ -138,10 +141,10 @@
             guna2GradientTileButton3.FillColor2 = Color.DarkRed;
             guna2GradientTileButton3.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             guna2GradientTileButton3.ForeColor = Color.White;
-            guna2GradientTileButton3.Location = new Point(464, 450);
+            guna2GradientTileButton3.Location = new Point(382, 450);
             guna2GradientTileButton3.Name = "guna2GradientTileButton3";
             guna2GradientTileButton3.ShadowDecoration.CustomizableEdges = customizableEdges6;
-            guna2GradientTileButton3.Size = new Size(158, 55);
+            guna2GradientTileButton3.Size = new Size(150, 55);
             guna2GradientTileButton3.TabIndex = 4;
             guna2GradientTileButton3.Text = "Tickets";
             guna2GradientTileButton3.Click += guna2GradientTileButton3_Click;
@@ -158,10 +161,10 @@
             guna2GradientTileButton4.FillColor2 = Color.DarkRed;
             guna2GradientTileButton4.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             guna2GradientTileButton4.ForeColor = Color.White;
-            guna2GradientTileButton4.Location = new Point(279, 450);
+            guna2GradientTileButton4.Location = new Point(219, 450);
             guna2GradientTileButton4.Name = "guna2GradientTileButton4";
             guna2GradientTileButton4.ShadowDecoration.CustomizableEdges = customizableEdges8;
-            guna2GradientTileButton4.Size = new Size(158, 55);
+            guna2GradientTileButton4.Size = new Size(150, 55);
             guna2GradientTileButton4.TabIndex = 5;
             guna2GradientTileButton4.Text = "Flights";
             guna2GradientTileButton4.Click += guna2GradientTileButton4_Click;
@@ -187,11 +190,32 @@
             pictureBox1.TabIndex = 6;
             pictureBox1.TabStop = false;
             // 
+            // guna2GradientTileButton1
+            // 
+            guna2GradientTileButton1.CustomizableEdges = customizableEdges9;
+            guna2GradientTileButton1.DisabledState.BorderColor = Color.DarkGray;
+            guna2GradientTileButton1.DisabledState.CustomBorderColor = Color.DarkGray;
+            guna2GradientTileButton1.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            guna2GradientTileButton1.DisabledState.FillColor2 = Color.FromArgb(169, 169, 169);
+            guna2GradientTileButton1.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            guna2GradientTileButton1.FillColor = Color.DarkRed;
+            guna2GradientTileButton1.FillColor2 = Color.DarkRed;
+            guna2GradientTileButton1.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            guna2GradientTileButton1.ForeColor = Color.White;
+            guna2GradientTileButton1.Location = new Point(712, 450);
+            guna2GradientTileButton1.Name = "guna2GradientTileButton1";
+            guna2GradientTileButton1.ShadowDecoration.CustomizableEdges = customizableEdges10;
+            guna2GradientTileButton1.Size = new Size(150, 55);
+            guna2GradientTileButton1.TabIndex = 7;
+            guna2GradientTileButton1.Text = "Reports";
+            guna2GradientTileButton1.Click += guna2GradientTileButton1_Click_1;
+            // 
             // Home
             // 
             AutoScaleDimensions = new SizeF(9F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(900, 528);
+            Controls.Add(guna2GradientTileButton1);
             Controls.Add(pictureBox1);
             Controls.Add(label2);
             Controls.Add(guna2GradientTileButton4);
@@ -225,5 +249,6 @@
         private Label label2;
         private PictureBox pictureBox1;
         private Label lbl_exit;
+        private Guna.UI2.WinForms.Guna2GradientTileButton guna2GradientTileButton1;
     }
 }
