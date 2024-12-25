@@ -62,10 +62,12 @@ The **Airline Management System** is a robust application designed to manage air
 ## Usage
 
 ### **Passenger Login**
+![Screenshot (425)](https://github.com/user-attachments/assets/c93ed991-6388-4dc6-b7d7-ce0c473fcbe3)
 - Passengers can register and log in to their accounts.
 - Access features like viewing flights, booking tickets, and managing their bookings.
 
 ### **Admin Login**
+![Screenshot (428)](https://github.com/user-attachments/assets/7fc36f4e-be05-4a8e-9e31-c70069e18b67)
 - Admins can log in to manage passengers, flights, and tickets.
 - Access detailed reports on flights, passengers, and cancellations.
 
