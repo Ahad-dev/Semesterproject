@@ -12,7 +12,8 @@ The **Airline Management System** is a robust application designed to manage air
 - **View Booking Details**: Check the details of current and past bookings.
 
 ### **Admin Features**
-- **Manage Passengers**: 
+- **Manage Passengers**:
+- ![Screenshot (420)](https://github.com/user-attachments/assets/a425f023-78de-41bf-8383-e405415f215b) 
   - Add new passengers.
   - Remove existing passengers.
   - Update passenger details.
@@ -21,6 +22,7 @@ The **Airline Management System** is a robust application designed to manage air
   - Remove flights.
   - Update flight details.
 - **Manage Tickets**:
+- ![Screenshot (429)](https://github.com/user-attachments/assets/883af86b-7931-43cd-96b3-1d39c46a228f)
   - View all ticket bookings.
   - Clear canceled tickets.
 - **View System Data**:
