@@ -13,7 +13,7 @@ namespace Semesterproject
 {
     public partial class btn_update : Form
     {
-        string Id;
+        public string Id;
         public btn_update(string ID)
         {
             Id = ID;
@@ -55,7 +55,16 @@ namespace Semesterproject
 
         private void btn_BookTicket_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("We recieved Your Call, Admin Will Book Your Ticket Soon.");
+            Tickets T = new Tickets();
+            T.Show();
+            this.Hide();
+        }
+
+        private void guna2GradientTileButton1_Click(object sender, EventArgs e)
+        {
+            Feedback F = new Feedback(Id);
+            F.Show();
+            this.Hide();
         }
     }
 }

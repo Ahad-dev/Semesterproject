@@ -56,6 +56,10 @@ namespace Semesterproject
             {
                 MessageBox.Show("Gender can be only Male/Female or None");
             }
+            else if (txt_phone.Text.Length > 12)
+            {
+                MessageBox.Show("Invalid Phone Number!!");
+            }
             else
             {
                 try
@@ -78,7 +82,7 @@ namespace Semesterproject
 
                     var newPassengerRecord = new Passengers
                     {
-                        PassId = passengerId, 
+                        PassId = passengerId,
                         PassName = name,
                         Passport = passport,
                         PassAddress = address,
@@ -175,9 +179,28 @@ namespace Semesterproject
                 if (delete.DeletedCount > 0)
                 {
                     MessageBox.Show("Passenger Approved and Confirmed..");
-                    lbl_count.Text = (int.Parse(lbl_count.Text)-1).ToString();
+                    lbl_count.Text = (int.Parse(lbl_count.Text) - 1).ToString();
                 }
             }
+        }
+
+        private void txt_CNIC_Validating(object sender, CancelEventArgs e)
+        {
+            if (String.IsNullOrEmpty(txt_passengerid.Text))
+            {
+                e.Cancel = true;
+                errorProvider1.SetError(txt_passengerid, "Enter Passenger ID");
+            }
+            else
+            {
+                e.Cancel = true;
+                errorProvider1.SetError(txt_passengerid, null);
+            }
+        }
+
+        private void txt_CNIC_Validated(object sender, EventArgs e)
+        {
+            errorProvider1.SetError(txt_passengerid, null);
         }
     }
 }

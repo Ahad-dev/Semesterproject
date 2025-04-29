@@ -17,6 +17,7 @@ namespace Semesterproject
     public partial class lbl_flights : Form
     {
         private readonly IMongoCollection<FlightsRecords> _flightsCollection;
+        private readonly IMongoCollection<Passengers> _passengersCollection;
 
         public lbl_flights()
         {
@@ -24,6 +25,7 @@ namespace Semesterproject
 
             var mongoServices = new MongoDBservices();
             _flightsCollection = mongoServices.GetFlightsCollection();
+            _passengersCollection = mongoServices.GetPassengersCollection();
         }
 
         private void Flights_Load(object sender, EventArgs e)
@@ -38,7 +40,7 @@ namespace Semesterproject
                 return;
             }
 
-            if (txt_FlCode.Text == "" || txt_FlCode.Text == "Enter Flight Code.." || cmx_date.Text == "" || cmx_source.Text == "Enter Source..." || cmx_destination.Text == "" || cmx_destination.Text == "Enter Destination..." || cmx_source.Text == "" || txt_seats.Text == "" || txt_seats.Text == "Enter Total Seats")
+            if (txt_FlCode.Text == "" || txt_FlCode.Text == "Enter Flight Code.." || cmx_source.Text == "Enter Source..." || cmx_destination.Text == "" || cmx_destination.Text == "Enter Destination..." || cmx_source.Text == "" || txt_seats.Text == "" || txt_seats.Text == "Enter Total Seats" || txt_pilot.Text == "")
             {
                 MessageBox.Show("Missing Information...");
             }
@@ -50,7 +52,7 @@ namespace Semesterproject
                     int FlId = int.Parse(id);
                     string source = cmx_source.Text;
                     string destination = cmx_destination.Text;
-                    string date = cmx_date.Text;
+                    string date = "N/A";
                     string totalSeats = txt_seats.Text;
                     int Total = int.Parse(totalSeats);
 
@@ -162,7 +164,6 @@ namespace Semesterproject
             txt_FlCode.ForeColor = Color.Silver;
             txt_seats.Text = "Enter Total Seats...";
             txt_seats.ForeColor = Color.Silver;
-            cmx_date.Text = "";
             cmx_destination.Text = "Enter Destination...";
             cmx_destination.ForeColor = Color.Silver;
             cmx_source.Text = "Enter Source...s";
@@ -198,6 +199,18 @@ namespace Semesterproject
             ViewFlights VF = new ViewFlights();
             VF.Show();
             this.Hide();
+        }
+
+        private void txt_pilot_Leave(object sender, EventArgs e)
+        {
+            var Filter = Builders<Passengers>.Filter.Eq("_id", txt_pilot.Text);
+            var Found = _passengersCollection.Find(Filter).FirstOrDefault();
+
+            if (Found == null)
+            {
+                MessageBox.Show("Invalid-Id OR Unregistered Pilot!");
+                txt_pilot.Text = "";
+            }
         }
     }
 }

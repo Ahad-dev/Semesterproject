@@ -17,6 +17,7 @@ namespace Semesterproject.Services
         private readonly IMongoCollection<Cancellation> _cancelTicketCollection;
         private readonly IMongoCollection<CustomersPasswords> _passwordsCollection;
         private readonly IMongoCollection<Report> _reportscollection;
+        private readonly IMongoCollection<FeedbackModel> _feedbackcollection;
 
         public MongoDBservices()
         {
@@ -29,11 +30,17 @@ namespace Semesterproject.Services
             _cancelTicketCollection = database.GetCollection<Cancellation>("CancelTicketsCollection");
             _passwordsCollection = database.GetCollection<CustomersPasswords>("PasswordsCollection");
             _reportscollection = database.GetCollection<Report>("ReportsCollection");
+            _feedbackcollection = database.GetCollection<FeedbackModel>("FeedbacksCollection");
         }
 
         public IMongoCollection<Passengers> GetPassengersCollection()
         {
             return _passengersCollection;
+        }
+
+        public IMongoCollection<FeedbackModel> GetFeedbackCollection()
+        {
+            return _feedbackcollection;
         }
 
         public IMongoCollection<FlightsRecords> GetFlightsCollection()

@@ -279,12 +279,13 @@
             txt_Ticket.BackColor = SystemColors.Control;
             txt_Ticket.BorderStyle = BorderStyle.None;
             txt_Ticket.Font = new Font("Segoe UI Emoji", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txt_Ticket.Location = new Point(95, 102);
+            txt_Ticket.Location = new Point(95, 103);
             txt_Ticket.Margin = new Padding(3, 2, 3, 2);
             txt_Ticket.Multiline = true;
             txt_Ticket.Name = "txt_Ticket";
             txt_Ticket.Size = new Size(198, 34);
             txt_Ticket.TabIndex = 66;
+            txt_Ticket.TextChanged += txt_Ticket_TextChanged;
             txt_Ticket.Enter += txt_Ticket_Enter;
             txt_Ticket.Leave += txt_Ticket_Leave;
             // 
@@ -464,6 +465,7 @@
             Name = "Tickets";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Tickets";
+            Load += Tickets_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();

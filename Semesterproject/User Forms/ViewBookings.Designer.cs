@@ -71,7 +71,7 @@
             // txt_amount
             // 
             txt_amount.Font = new Font("Century Gothic", 12F);
-            txt_amount.Location = new Point(584, 166);
+            txt_amount.Location = new Point(584, 168);
             txt_amount.Name = "txt_amount";
             txt_amount.Size = new Size(187, 32);
             txt_amount.TabIndex = 78;
@@ -313,6 +313,7 @@
             guna2DataGridView1.ThemeStyle.RowsStyle.Height = 29;
             guna2DataGridView1.ThemeStyle.RowsStyle.SelectionBackColor = Color.Bisque;
             guna2DataGridView1.ThemeStyle.RowsStyle.SelectionForeColor = Color.FromArgb(71, 69, 94);
+            guna2DataGridView1.CellContentClick += guna2DataGridView1_CellContentClick;
             // 
             // lbl_exit
             // 

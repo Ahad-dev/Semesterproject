@@ -129,5 +129,10 @@ namespace Semesterproject
             txt_PassName.ReadOnly = false;
             txt_PassNation.ReadOnly = false;
         }
+
+        private void guna2DataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

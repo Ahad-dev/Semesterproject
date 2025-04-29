@@ -24,6 +24,7 @@ namespace Semesterproject
 
             var mongoServices = new MongoDBservices();
             _flightsCollection = mongoServices.GetFlightsCollection();
+            btn_back.Enabled = true;
 
             guna2DataGridView1.DefaultCellStyle.BackColor = Color.Honeydew;
             guna2DataGridView1.AlternatingRowsDefaultCellStyle.BackColor = Color.Honeydew;
@@ -192,6 +193,11 @@ namespace Semesterproject
             txt_numberofseats.ReadOnly = false;
             cmd_destination.Enabled = true;
             cmb_source.Enabled = true;
+        }
+
+        private void txt_flightcode_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

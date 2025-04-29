@@ -25,5 +25,8 @@ namespace Semesterproject.Models
 
         [BsonElement("TakeofDate")]
         public string? TakeofDate { get; set; }
+
+        [BsonElement("PilotID")]
+        public string? PilotID { get; set; }
     }
 }

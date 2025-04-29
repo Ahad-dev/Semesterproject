@@ -281,6 +281,7 @@
             txt_flightcode.Size = new Size(198, 34);
             txt_flightcode.TabIndex = 95;
             txt_flightcode.TextAlign = HorizontalAlignment.Center;
+            txt_flightcode.TextChanged += txt_flightcode_TextChanged;
             txt_flightcode.Enter += txt_flightcode_Enter;
             txt_flightcode.Leave += txt_flightcode_Leave;
             // 

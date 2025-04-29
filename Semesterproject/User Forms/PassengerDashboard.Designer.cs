@@ -37,6 +37,8 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             btn_Pass = new Guna.UI2.WinForms.Guna2GradientTileButton();
             lbl_exit = new Label();
             label1 = new Label();
@@ -47,6 +49,7 @@
             btn_BookTicket = new Guna.UI2.WinForms.Guna2GradientTileButton();
             panel1 = new Panel();
             label3 = new Label();
+            guna2GradientTileButton1 = new Guna.UI2.WinForms.Guna2GradientTileButton();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panel1.SuspendLayout();
             SuspendLayout();
@@ -202,12 +205,34 @@
             label3.Text = "X";
             label3.Click += label3_Click;
             // 
+            // guna2GradientTileButton1
+            // 
+            guna2GradientTileButton1.CustomizableEdges = customizableEdges9;
+            guna2GradientTileButton1.DisabledState.BorderColor = Color.DarkGray;
+            guna2GradientTileButton1.DisabledState.CustomBorderColor = Color.DarkGray;
+            guna2GradientTileButton1.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            guna2GradientTileButton1.DisabledState.FillColor2 = Color.FromArgb(169, 169, 169);
+            guna2GradientTileButton1.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            guna2GradientTileButton1.FillColor = Color.Navy;
+            guna2GradientTileButton1.FillColor2 = Color.Navy;
+            guna2GradientTileButton1.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            guna2GradientTileButton1.ForeColor = Color.White;
+            guna2GradientTileButton1.ImageSize = new Size(20, 18);
+            guna2GradientTileButton1.Location = new Point(327, 577);
+            guna2GradientTileButton1.Name = "guna2GradientTileButton1";
+            guna2GradientTileButton1.ShadowDecoration.CustomizableEdges = customizableEdges10;
+            guna2GradientTileButton1.Size = new Size(215, 43);
+            guna2GradientTileButton1.TabIndex = 14;
+            guna2GradientTileButton1.Text = "Provide Feedback";
+            guna2GradientTileButton1.Click += guna2GradientTileButton1_Click;
+            // 
             // btn_update
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            ClientSize = new Size(861, 597);
+            ClientSize = new Size(861, 667);
+            Controls.Add(guna2GradientTileButton1);
             Controls.Add(btn_Pass);
             Controls.Add(pictureBox1);
             Controls.Add(label2);
@@ -238,5 +263,6 @@
         private Guna.UI2.WinForms.Guna2GradientTileButton btn_BookTicket;
         private Panel panel1;
         private Label label3;
+        private Guna.UI2.WinForms.Guna2GradientTileButton guna2GradientTileButton1;
     }
 }

@@ -46,11 +46,16 @@ namespace Semesterproject
             }
             else if (txt_role.Text != "Admin" && txt_role.Text != "Customer")
             {
-                MessageBox.Show("Type Role as Admin/Customer.");
+                MessageBox.Show("Type Role as an Admin/Customer/Pilot");
             }
             else if (txt_role.Text == "Admin")
             {
                 MessageBox.Show("Sorry, Admins Can't SignUp!!");
+                btn_login.Enabled = false;
+            }
+            else if (txt_role.Text == "Pilot")
+            {
+                MessageBox.Show("Sorry, Pilots Can't SignUp!!");
                 btn_login.Enabled = false;
             }
             else
@@ -94,6 +99,18 @@ namespace Semesterproject
                             BU.Show();
                             this.Hide();
                         }
+                        else if (Found.Role == "Pilot")
+                        {
+                            PilotsDashboard PD = new PilotsDashboard(Found.PassId.ToString());
+                            PD.Show();
+                            this.Hide();
+                        }
+                        else if (Found.Role == "Staff")
+                        {
+                            AirLineStaffDashboard PD = new AirLineStaffDashboard();
+                            PD.Show();
+                            this.Hide();
+                        }
                     }
                     else
                     {
@@ -102,7 +119,7 @@ namespace Semesterproject
                 }
                 else
                 {
-                    MessageBox.Show("Invalid CNIC !!!");
+                    MessageBox.Show("Passenger Not Found, pls Register First");
                 }
             }
         }

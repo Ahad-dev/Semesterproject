@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddPassengers));
             label2 = new Label();
             label1 = new Label();
@@ -64,6 +65,7 @@
             pictureBox10 = new PictureBox();
             lbl_count = new Label();
             label4 = new Label();
+            errorProvider1 = new ErrorProvider(components);
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox7).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox6).BeginInit();
@@ -75,6 +77,7 @@
             panel9.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox8).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox10).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)errorProvider1).BeginInit();
             SuspendLayout();
             // 
             // label2
@@ -409,6 +412,8 @@
             txt_CNIC.Size = new Size(212, 29);
             txt_CNIC.TabIndex = 132;
             txt_CNIC.Leave += txt_CNIC_Leave;
+            txt_CNIC.Validating += txt_CNIC_Validating;
+            txt_CNIC.Validated += txt_CNIC_Validated;
             // 
             // pictureBox10
             // 
@@ -439,6 +444,10 @@
             label4.Size = new Size(148, 23);
             label4.TabIndex = 135;
             label4.Text = "UnApproved :";
+            // 
+            // errorProvider1
+            // 
+            errorProvider1.ContainerControl = this;
             // 
             // AddPassengers
             // 
@@ -496,6 +505,7 @@
             panel9.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBox8).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox10).EndInit();
+            ((System.ComponentModel.ISupportInitialize)errorProvider1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -536,5 +546,6 @@
         private PictureBox pictureBox10;
         private Label lbl_count;
         private Label label4;
+        private ErrorProvider errorProvider1;
     }
 }

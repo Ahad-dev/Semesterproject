@@ -59,10 +59,6 @@ namespace Semesterproject
             {
                 MessageBox.Show("Missing Information.");
             }
-            else if (txt_Phone.Text.Length != 14)
-            {
-                MessageBox.Show("Invalid PhoneNumber.");
-            }
 
             else
             {
@@ -214,7 +210,7 @@ namespace Semesterproject
 
         private void txt_Amount_Leave(object sender, EventArgs e)
         {
-            if (int.Parse(txt_Phone.Text) < 50)
+            if (int.Parse(txt_Amount.Text) < 50)
             {
                 button1.Enabled = false;
                 MessageBox.Show("Amount can't be les than 50$.");
@@ -223,6 +219,16 @@ namespace Semesterproject
             {
                 button1.Enabled = true;
             }
+        }
+
+        private void txt_Ticket_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Tickets_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
